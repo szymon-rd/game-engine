@@ -43,7 +43,7 @@ import java.util.Set;
 /**
  * @author Jaca777
  *         Created 13.12.14 at 14:59
- *         TEMPORARY CODE, USED FOR DEBUGGING.
+ *         TEMPORARY CODE
  */
 public class Main extends Application {
 
@@ -74,7 +74,7 @@ public class Main extends Application {
     }
 
     /**
-     * TEMPORARY CODE, USED FOR DEBUGGING.
+     * TEMPORARY CODE
      */
     @Override
     public void start(Stage stage) {
