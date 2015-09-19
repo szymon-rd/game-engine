@@ -1,0 +1,14 @@
+pos: 1 0
+maxh: 100
+minh: 0
+mat: 0
+ea: 8
+e: mushroom 25 25
+e: mushroom 70 100
+e: mushroom 90 130
+e: mushroom 180 150
+e: mushroom 200 20
+e: mushroom 25 200
+e: mushroom 80 180
+e: mushroom 200 200
+wsa: 0

@@ -1,0 +1,5 @@
+dependencies {
+    compile 'org.lwjgl.lwjgl:lwjgl:2.9.1'
+    compile 'org.lwjgl.lwjgl:lwjgl_util:2.9.1'
+    compile 'org.ow2.asm:asm-debug-all:5.0'
+}

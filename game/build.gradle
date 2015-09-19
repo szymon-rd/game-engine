@@ -1,0 +1,3 @@
+dependencies{
+    compile project (':engine')//kaj je masz? Niby jest z mavena pobiera³o
+}
