@@ -1,0 +1,9 @@
+subprojects {
+    dependencies {
+        if (name != 'tools-common') {
+            compile project(':tools:tools-common')
+        }
+    }
+}
+
+
