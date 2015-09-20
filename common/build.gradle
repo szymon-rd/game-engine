@@ -1,0 +1,4 @@
+dependencies {
+    compile 'commons-io:commons-io:2.4'
+    compile 'org.ow2.asm:asm-debug-all:5.0'
+}
