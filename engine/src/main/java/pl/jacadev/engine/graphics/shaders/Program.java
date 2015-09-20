@@ -12,6 +12,7 @@ import pl.jacadev.engine.graphics.contexts.Bindings;
 import pl.jacadev.engine.graphics.textures.Texture;
 import pl.jacadev.engine.graphics.utility.BufferTools;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.nio.FloatBuffer;
 
@@ -26,10 +27,16 @@ public class Program {
     private final int program;
 
     public Program(InputStream vertexShader, InputStream fragmentShader, String[] outNames) {
-        int vS = ShaderUtil.compileShader(GL_VERTEX_SHADER, vertexShader);
-        int fS = ShaderUtil.compileShader(GL_FRAGMENT_SHADER, fragmentShader);
-        this.program = ShaderUtil.createProgram(vS, fS, outNames);
-        glUseProgram(this.program);
+        int program = -1;
+        try {
+            int vS = ShaderUtil.compileShader(GL_VERTEX_SHADER, vertexShader);
+            int fS = ShaderUtil.compileShader(GL_FRAGMENT_SHADER, fragmentShader);
+            program = ShaderUtil.createProgram(vS, fS, outNames);
+            glUseProgram(program);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        this.program = program;
     }
 
     public Program(String vertexSource, String fragmentSource, String[] outNames) {
@@ -53,6 +60,7 @@ public class Program {
 
     /**
      * Binds the texture to the given sampler.
+     *
      * @param texture Texture to bind.
      * @param sampler Sampler offset to bind the texture to.
      */
@@ -62,7 +70,7 @@ public class Program {
     }
 
     public void useTexture(int texture, int tType, int sampler) {
-        if(texture != -1) {
+        if (texture != -1) {
             GL13.glActiveTexture(GL13.GL_TEXTURE0 + sampler);
             GL11.glBindTexture(tType, texture);
         }
@@ -124,6 +132,7 @@ public class Program {
     }
 
     private FloatBuffer tempBuff4 = BufferUtils.createFloatBuffer(16);
+
     public void setUniformMatrix4(int location, Matrix4f matrix) {
         BufferTools.storeMat4(matrix, tempBuff4);
         glUniformMatrix4(location, false, tempBuff4);
@@ -134,6 +143,7 @@ public class Program {
     }
 
     private FloatBuffer tempBuff3 = BufferUtils.createFloatBuffer(9);
+
     public void setUniformMatrix3(int location, Matrix3f matrix) {
         BufferTools.storeMat3(matrix, tempBuff3);
         glUniformMatrix3(location, false, tempBuff3);

@@ -1,2 +1,15 @@
 dependencies {
+    compile project (':game')
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'pl.jacadev.editor.Main',
+        )
+    }
+    archiveName = "editor.jar"
+    from {
+        configurations.compile
+    }
 }

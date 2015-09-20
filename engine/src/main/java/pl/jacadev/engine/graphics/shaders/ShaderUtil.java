@@ -1,5 +1,6 @@
 package pl.jacadev.engine.graphics.shaders;
 
+import org.apache.commons.io.IOUtils;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL30;
 import pl.jacadev.engine.graphics.utility.Streams;
@@ -32,8 +33,8 @@ public class ShaderUtil {
      * @param stream Stream with a shader code.
      * @return The shader's name.
      */
-    public static int compileShader(int type, InputStream stream) {
-        String code = Streams.streamToString(stream);
+    public static int compileShader(int type, InputStream stream) throws IOException {
+        String code = IOUtils.toString(stream);
         return compileShader(type, code);
     }
 

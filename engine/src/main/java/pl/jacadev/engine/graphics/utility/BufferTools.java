@@ -1,10 +1,12 @@
 package pl.jacadev.engine.graphics.utility;
 
+import org.apache.commons.io.IOUtils;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.util.vector.Matrix3f;
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector4f;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
@@ -69,8 +71,8 @@ public class BufferTools {
      * @param stream InputStream to be stored in a direct buffer.
      * @return Direct buffer containing stream.
      */
-    public static ByteBuffer toDirectBuffer(InputStream stream) {
-        byte[] data = Streams.streamToBytes(stream);
+    public static ByteBuffer toDirectBuffer(InputStream stream) throws IOException {
+        byte[] data = IOUtils.toByteArray(stream);
         ByteBuffer buffer = BufferUtils.createByteBuffer(data.length)
                 .put(data);
         buffer.flip();
