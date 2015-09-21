@@ -5,4 +5,5 @@ include 'common'
 include 'tools'
 include 'tools:tools-math'
 include 'tools:tools-common'
+include 'tools:tools-test'
 

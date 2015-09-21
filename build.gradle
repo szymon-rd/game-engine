@@ -9,5 +9,7 @@ subprojects {
         if (name != 'common') {
             compile project (':common')
         }
+        testCompile group: 'junit', name: 'junit', version: '4.11'
+        testCompile project (':tools:tools-test')
     }
 }
