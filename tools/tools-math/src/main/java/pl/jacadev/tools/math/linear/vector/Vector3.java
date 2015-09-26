@@ -1,4 +1,4 @@
-package pl.jacadev.tools.math.linear;
+package pl.jacadev.tools.math.linear.vector;
 
 import java.nio.FloatBuffer;
 
@@ -6,65 +6,65 @@ import java.nio.FloatBuffer;
  * @author Jaca777
  *         Created 2015-09-21 at 19
  */
-public class Vector4 extends Vector{
-    private float x, y, z, w;
+public class Vector3 extends Vector {
 
-    public Vector4(float x, float y, float z, float w) {
-        super(4);
+    private float x, y, z;
+
+    public Vector3(float x, float y, float z) {
+        super(3);
         this.x = x;
         this.y = y;
         this.z = z;
-        this.w = w;
     }
 
-    public Vector4() {
-        super(4);
+    public Vector3() {
+        super(3);
     }
 
-    public Vector4(Vector4 vector) {
-        super(4);
+    public Vector3(Vector3 vector) {
+        super(3);
         this.x = vector.getX();
         this.y = vector.getY();
         this.z = vector.getZ();
-        this.w = vector.getW();
     }
 
-    public void dot(Vector2 vector){
+
+    public void dot(Vector2 vector) {
         //TODO
         throw new UnsupportedOperationException();
     }
 
-    public void cross(Vector2 vector){
+    public void cross(Vector2 vector) {
         //TODO
         throw new UnsupportedOperationException();
     }
 
-    public void multiply(Vector2 vector){
+    public void multiply(Vector2 vector) {
         //TODO
         throw new UnsupportedOperationException();
     }
 
-    public void divide(Vector2 vector){
+    public void divide(Vector2 vector) {
         //TODO
         throw new UnsupportedOperationException();
     }
 
-    public void add(Vector2 vector){
+    public void add(Vector2 vector) {
         //TODO
         throw new UnsupportedOperationException();
     }
 
-    public void sub(Vector2 vector){
+    public void sub(Vector2 vector) {
         //TODO
         throw new UnsupportedOperationException();
     }
 
-    public void negate(){
+    public void negate() {
         //TODO
         throw new UnsupportedOperationException();
     }
 
-    public void normalize(){
+    public void normalize() {
         //TODO
         throw new UnsupportedOperationException();
     }
@@ -97,13 +97,5 @@ public class Vector4 extends Vector{
 
     public void setZ(float z) {
         this.z = z;
-    }
-
-    public float getW() {
-        return w;
-    }
-
-    public void setW(float w) {
-        this.w = w;
     }
 }

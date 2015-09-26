@@ -1,4 +1,4 @@
-package pl.jacadev.tools.math.linear;
+package pl.jacadev.tools.math.linear.vector;
 
 import java.nio.FloatBuffer;
 

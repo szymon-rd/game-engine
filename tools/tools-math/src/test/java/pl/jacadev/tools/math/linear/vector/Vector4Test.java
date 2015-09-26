@@ -1,4 +1,4 @@
-package pl.jacadev.tools.math.linear;
+package pl.jacadev.tools.math.linear.vector;
 
 import org.junit.Test;
 
@@ -6,9 +6,9 @@ import static org.junit.Assert.*;
 
 /**
  * @author Jaca777
- *         Created 2015-09-21 at 19
+ *         Created 2015-09-26 at 20
  */
-public class Vector3Test {
+public class Vector4Test {
 
     @Test
     public void testDot() throws Exception {
@@ -47,11 +47,6 @@ public class Vector3Test {
 
     @Test
     public void testNormalize() throws Exception {
-
-    }
-
-    @Test
-    public void testStore() throws Exception {
 
     }
 }
