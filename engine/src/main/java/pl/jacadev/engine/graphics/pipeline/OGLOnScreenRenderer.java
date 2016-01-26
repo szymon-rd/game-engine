@@ -39,9 +39,9 @@ public class OGLOnScreenRenderer extends OGLRenderer {
     }
 
     @Override
-    public void setInput(OGLRendererOutput<? extends Texture> out) {
+    public void setInput(OGLRendererOutput<? extends Texture> out) { 
         if(out instanceof RawTextureOutput) this.srcTexture = out.getOutput().getTexture();
-        else throw new IllegalArgumentException("Wrong type of given input. RawTexture2D expected.");
+        else throw new IllegalArgumentException("Wrong type of given input. RawTexture2D expected."); //LSP :(
     }
 
     @Override
