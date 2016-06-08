@@ -1,6 +1,6 @@
 package pl.jacadev.game.resmanagement.manageables;
 
-import pl.jacadev.engine.graphics.contexts.Bindings;//ale jebaæ tox d
+import pl.jacadev.engine.graphics.contexts.Bindings;//ale jebaÃ¦ tox d
 import pl.jacadev.game.resmanagement.ResourceDesc;
 import pl.jacadev.game.resmanagement.ResourceManager;
 import pl.jacadev.game.resmanagement.loading.DataContainer;
@@ -19,7 +19,7 @@ import pl.jacadev.game.resmanagement.ResourceManagementException;
 public class ManageableStaticEntityModel extends StaticEntityModel implements Manageable{
 
     private boolean loaded = false;
-    private boolean blocked = false;//zg³upai³em xd
+    private boolean blocked = false;
 
     private ModelDesc modelDesc;
     private TextureArrayDesc textureDesc;
