@@ -15,7 +15,7 @@ public class ManageableStaticEntity extends StaticEntity {
     }
 
     @Override
-    public void unload() { //TO NADAL JEST WTF xD
+    public void unload() {
         ResourceManager.cancelUsage(((ManageableStaticEntityModel) model).getDesc());
     }
 }
