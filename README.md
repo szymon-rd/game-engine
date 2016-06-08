@@ -11,4 +11,4 @@ Game Engine written in OpenGL, Java.
  - [x] Dynamically loaded, component-based scene.
  
  ## demo
- [![Demo CountPages alpha](http://share.gifyoutube.com/KzB6Gb.gif)](https://www.youtube.com/watch?v=LIpQO0UVPWo)
+[![Alt text for your video](http://img.youtube.com/vi/LIpQO0UVPWo/0.jpg)](https://www.youtube.com/watch?v=LIpQO0UVPWo)
